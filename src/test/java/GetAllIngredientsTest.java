@@ -1,4 +1,4 @@
-import base.BaseOrderTest;
+import base.BaseOrder;
 import constants.ErrorMessage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -10,7 +10,7 @@ import org.junit.Test;
 import static org.apache.http.HttpStatus.SC_OK;
 
 @Feature("Получение данных об ингредиентах - GET /api/ingredients")
-public class GetAllIngredientsTest extends BaseOrderTest {
+public class GetAllIngredientsTest extends BaseOrder {
     @Test
     @DisplayName("Отправка GET запроса /api/ingredients для получения данных об ингредиентах")
     @Description("Данные получены")

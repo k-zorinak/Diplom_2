@@ -1,4 +1,4 @@
-import base.BaseUserTest;
+import base.BaseUser;
 import constants.ErrorMessage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -12,7 +12,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 
 @Feature("Авторизация пользователя - POST /api/auth/login")
-public class LogInUserTest extends BaseUserTest {
+public class LogInUserTest extends BaseUser {
 
     @Test
     @DisplayName("Отправка корректного POST запроса /api/auth/login")

@@ -2,9 +2,9 @@ package constants;
 
 public class ErrorMessage {
     //  Успех
-    public static final Boolean SUCCESS = true;
+    public static final boolean SUCCESS = true;
     //  Неудача
-    public static final Boolean NOT_SUCCESS = false;
+    public static final boolean NOT_SUCCESS = false;
     //  Создание пользователя
     //  Если пользователь существует, вернётся код ответа 403 Forbidden
     public static final String EXIST_LOGIN = "User already exists";

@@ -6,13 +6,13 @@ import constants.UserFields;
 import io.qameta.allure.Step;
 import resources.UserCard;
 
-public class BaseUserTest {
-    private final GenerateUserData generateUserData = new GenerateUserData();
-    public UserAction userAction = new UserAction();
-    public UserCard userCard;
+public class BaseUser {
+    private static final GenerateUserData generateUserData = new GenerateUserData();
+    public static UserAction userAction = new UserAction();
+    public static UserCard userCard;
 
     @Step("Создание и заполение карточки пользователя (email + password + name)")
-    public void generateEmailPassNameUserData() {
+    public static void generateEmailPassNameUserData() {
         generateUserData.generateEmailPassName();
         userCard = new UserCard(
                 generateUserData.getUserEmail(),
@@ -21,7 +21,7 @@ public class BaseUserTest {
     }
 
     @Step("Создание и заполение данных для изменения (email + name)")
-    public Object generateEmailNameUserData() {
+    public static Object generateEmailNameUserData() {
         generateUserData.generateEmailPassName();
         userCard = new UserCard(
                 generateUserData.getUserEmail(),

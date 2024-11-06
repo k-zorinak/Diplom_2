@@ -1,4 +1,4 @@
-import base.BaseUserTest;
+import base.BaseUser;
 import constants.ErrorMessage;
 import constants.UserFields;
 import io.qameta.allure.Description;
@@ -13,7 +13,7 @@ import static org.apache.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.http.HttpStatus.SC_OK;
 
 @Feature("Создание пользователя - POST /api/auth/register")
-public class CreateUserTest extends BaseUserTest {
+public class CreateUserTest extends BaseUser {
 
     @Test
     @DisplayName("Отправка корректного POST запроса /api/auth/register")

@@ -1,4 +1,4 @@
-import base.BaseOrderTest;
+import base.BaseOrder;
 import constants.ErrorMessage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -12,7 +12,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 
 @Feature("Получение заказов конкретного пользователя - GET /api/orders")
-public class GetOrdersUserTest extends BaseOrderTest {
+public class GetOrdersUserTest extends BaseOrder {
     @Test
     @DisplayName("Отправка корректного GET запроса /api/orders c авторизацией")
     @Description("Удачное получение списка заказов для /api/orders")
