@@ -3,6 +3,7 @@ package actions;
 import api.model.AllIngredientsResponse;
 import constants.PathApi;
 import io.restassured.response.Response;
+import resources.OrderCard;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,7 +20,7 @@ public class OrderAction extends BaseApi {
                 .get(PathApi.GET_INGREDIENTS);
     }
 
-    public Response postRequestCreateOrderLogIn(Object obj, Object obj1) {
+    public Response postRequestCreateOrderLogIn(OrderCard obj, String obj1) {
         return given(requestSpecification())
                 .header("Authorization", obj1)
                 .body(obj)
@@ -27,7 +28,7 @@ public class OrderAction extends BaseApi {
                 .post(PathApi.CREATE_ORDER);
     }
 
-    public Response getRequestAllOrdersUserLogIn(Object obj) {
+    public Response getRequestAllOrdersUserLogIn(String obj) {
         return given(requestSpecification())
                 .header("Authorization", obj)
                 .when()
@@ -40,7 +41,7 @@ public class OrderAction extends BaseApi {
                 .get(PathApi.GET_ORDER_USER);
     }
 
-    public Response postRequestCreateOrderNotLogIn(Object obj) {
+    public Response postRequestCreateOrderNotLogIn(OrderCard obj) {
         return given(requestSpecification())
                 .body(obj)
                 .when()

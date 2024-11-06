@@ -21,7 +21,7 @@ public class BaseUser {
     }
 
     @Step("Создание и заполение данных для изменения (email + name)")
-    public static Object generateEmailNameUserData() {
+    public static UserCard generateEmailNameUserData() {
         generateUserData.generateEmailPassName();
         userCard = new UserCard(
                 generateUserData.getUserEmail(),

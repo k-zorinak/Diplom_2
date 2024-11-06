@@ -18,7 +18,7 @@ public class UserAction extends BaseApi {
                 .post(PathApi.CREATE_USER);
     }
 
-    public Response postRequestLogIn(Object obj) {
+    public Response postRequestLogIn(UserCard obj) {
         return given(requestSpecification())
                 .body(obj)
                 .when()
@@ -32,7 +32,7 @@ public class UserAction extends BaseApi {
                 .get(PathApi.GET_INFO_USER);
     }
 
-    public Response patchRequestUserInfo(Object obj, Object obj1) {
+    public Response patchRequestUserInfo(String obj, UserCard obj1) {
         return given(requestSpecification())
                 .header("Authorization", obj)
                 .body(obj1)
@@ -40,7 +40,7 @@ public class UserAction extends BaseApi {
                 .patch(PathApi.PATCH_USER);
     }
 
-    public Response patchRequestUserInfoNotToken(Object obj) {
+    public Response patchRequestUserInfoNotToken(UserCard obj) {
         return given(requestSpecification())
                 .body(obj)
                 .when()
